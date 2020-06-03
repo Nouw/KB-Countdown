@@ -9,7 +9,7 @@ export default function Reveal() {
 
     useEffect(() => {
         //Check if user isn't changing client time.
-        fetch('http://molch.io/projects/KB-Onthulling/public/date')
+        fetch('/api/date')
             .then(response => response.json())
             .then((data) => {
                 const timeDifference = (new Date().getTime() - new Date(data).getTime()) / 1000;
