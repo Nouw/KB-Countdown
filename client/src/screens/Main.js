@@ -5,7 +5,7 @@ import {Redirect} from 'react-router-dom';
 export default function Main() {
     const calculateTimeLeft = () => {
         //Shit is a bit retarded with calculation difference???
-        const difference = +new Date(2020, 5, 18, 20, 0, 0) - +new Date();
+        const difference = +new Date(2020, 5, 3, 10, 4, 0) - +new Date();
         let timeLeft = {};
 
         if (difference > 0) {
@@ -41,6 +41,9 @@ export default function Main() {
 
     return (
         <div className="mainBG">
+            {/*Hoi, ik zie je wel kijken! Helaas is hier niets te vinden. Ik zou je tijd niet verspillen aan het zoeken naar bugs/security issues
+            aangezien het een SPA is en er toch niks te zoeken is.
+            */}
             {timerComponents.length ?
                 <div className="flex-center container-fluid">
                     <div className="row" >
