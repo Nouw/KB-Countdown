@@ -12,8 +12,8 @@ export default function Reveal() {
         fetch('/api/date')
             .then(response => response.json())
             .then((data) => {
-                const timeDifference = (new Date().getTime() - new Date(2020, 5, 3, 10, 4, 0).getTime()) / 1000;
-                if(timeDifference > 0 && timeDifference < 1 && +new Date(2020, 5, 3, 10, 4, 0) - +new Date() < 0) {
+                const timeDifference = (new Date().getTime() - new Date(data).getTime()) / 1000;
+                if(timeDifference > 0 && timeDifference < 1 && +new Date(2020, 5, 18, 20, 0, 0) - +new Date() < 0) {
                     setValid(true);
                     setLoading(false);
                 } else {
