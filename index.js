@@ -1,17 +1,16 @@
 const express = require('express');
 const app = express();
 // serve up production assets
-app.get('/api/date', (req, res) => {
-    res.send(new Date())
-})
-
 app.use(express.static('client/build'));
 // let the react app to handle any unknown routes
 // serve up the index.html if express does'nt recognize the route
 const path = require('path');
 
+app.get('/api/date', (req, res) => {
+    res.json(new Date())
+})
 
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 // if not in production use the port 5000
