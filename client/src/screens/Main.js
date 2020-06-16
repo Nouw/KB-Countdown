@@ -41,9 +41,6 @@ export default function Main() {
 
     return (
         <div className="mainBG">
-            {/*Hoi, ik zie je wel kijken! Helaas is hier niets te vinden. Ik zou je tijd niet verspillen aan het zoeken naar bugs/security issues
-            aangezien het een SPA is en er toch niks te zoeken
-            */}
             {timerComponents.length ?
                 <div className="flex-center container-fluid">
                     <div className="row" >

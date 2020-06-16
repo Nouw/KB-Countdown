@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactPlayer from "react-player";
 import './Countdown.css';
 import Ice from '../images/ice.jpeg';
+import {Alert} from 'react-bootstrap';
 
 export default function Reveal() {
     const [valid, setValid] = useState(false);
@@ -33,9 +34,17 @@ export default function Reveal() {
         if(valid) {
             return (
                 <div className="flex-center container-fluid">
+                    <Alert variant="warning">
+                        Let op! De video start zonder geluid. Klik op de megafoon om te unmuten!
+                    </Alert>
                     <div className="row" >
                         <div className="col content">
-                            <ReactPlayer className="reveal-video" url="https://www.youtube.com/watch?v=AjWfY7SnMBI" controls={true}/>
+                            <ReactPlayer className="reveal-video" url="https://streamable.com/872qic" controls={false} playing muted
+                                         config={{ file: { attributes: {
+                                        autoPlay: true,
+                                        muted: true
+                                    }}}}
+                            />
 
                         </div>
                     </div>
