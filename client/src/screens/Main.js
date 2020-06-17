@@ -50,7 +50,7 @@ export default function Main() {
                         <p>
                             - De gemiddelde schoenmaat van het KB is 42.8
                         </p> :
-                        <p/>
+                        <p> - Er zijn momenteel geen feitjes om te weergeven</p>
                     }
                     { +new Date(2020, 5, 17, 18, 0, 0) - +new Date() < 0 ?
                         <p>
