@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Countdown.css';
 import {Redirect} from 'react-router-dom';
+import {Alert} from 'react-bootstrap';
 
 export default function Main() {
     const calculateTimeLeft = () => {
@@ -43,6 +44,45 @@ export default function Main() {
         <div className="mainBG">
             {timerComponents.length ?
                 <div className="flex-center container-fluid">
+                    <Alert variant="danger">
+                        <h4>Feitjes over het KB:</h4>
+                    { +new Date(2020, 5, 17, 13, 0, 0) - +new Date() < 0 ?
+                        <p>
+                            - De gemiddelde schoenmaat van het KB is 42.8
+                        </p> :
+                        <p/>
+                    }
+                    { +new Date(2020, 5, 17, 18, 0, 0) - +new Date() < 0 ?
+                        <p>
+                            - De gemiddelde lengte van het KB is 1.85
+                        </p> :
+                        <p/>
+                    }
+                    { +new Date(2020, 5, 17, 20, 0, 0) - +new Date() < 0 ?
+                        <p>
+                            - De gemiddelde leeftijd van het KB is 20.8
+                        </p> :
+                        <p/>
+                    }
+                    { +new Date(2020, 5, 18, 12, 0, 0) - +new Date() < 0 ?
+                        <p>
+                            - Er zitten vier vrouwen en twee mannen in het KB
+                        </p> :
+                        <p/>
+                    }
+                    { +new Date(2020, 5, 18, 16, 0, 0) - +new Date() < 0 ?
+                        <p>
+                            - Vier van de KBers zijn opgegroeid in de regio Utrecht
+                        </p> :
+                        <p/>
+                    }
+                    { +new Date(2020, 5, 18, 19, 55, 0) - +new Date() < 0 ?
+                        <p>
+                            - Het KB heeft in de volgende commissies gezeten: WeekendCie, GalaCie, FeestCie, Beachie, PR
+                        </p> :
+                        <p/>
+                    }
+                    </Alert>
                     <div className="row" >
                         <div className="col content">
                             <div className="title">KB Onthulling:</div>
