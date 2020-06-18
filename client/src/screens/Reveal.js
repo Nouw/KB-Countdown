@@ -14,7 +14,7 @@ export default function Reveal() {
             .then(response => response.json())
             .then((data) => {
                 const timeDifference = (new Date().getTime() - new Date(data).getTime()) / 1000;
-                if(timeDifference > 0 && timeDifference < 1 && +new Date(2020, 5, 18, 20, 0, 0) - +new Date() < 0) {
+                if(timeDifference > 0 && timeDifference < 1 && +new Date(2020, 5, 18, 20, 30, 0) - +new Date() < 0) {
                     setValid(true);
                     setLoading(false);
                 } else {
@@ -39,7 +39,7 @@ export default function Reveal() {
                     </Alert>
                     <div className="row" >
                         <div className="col content">
-                            <ReactPlayer className="reveal-video" url="https://streamable.com/872qic" controls={false} playing muted
+                            <ReactPlayer className="reveal-video" url="https://www.youtube.com/watch?v=cWrIyLNGLdU&feature=youtu.be" controls playing muted
                                          config={{ file: { attributes: {
                                         autoPlay: true,
                                         muted: true

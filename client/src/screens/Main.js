@@ -6,7 +6,7 @@ import {Alert} from 'react-bootstrap';
 export default function Main() {
     const calculateTimeLeft = () => {
         //Shit is a bit retarded with calculation difference???
-        const difference = +new Date(2020, 5, 18, 20, 0, 0) - +new Date();
+        const difference = +new Date(2020, 5, 18, 20, 30, 0) - +new Date();
         let timeLeft = {};
 
         if (difference > 0) {
